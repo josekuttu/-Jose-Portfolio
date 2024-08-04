@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UTV-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <script src="https://kit.fontawesome.com/673525b1a1.js" crossorigin="anonymous"></script>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo removed.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p> Developer </p>
+                    <h1> Hi,  I'm   <span>Jose</span> from Idukki</h1>
+                </div>
+            </div>
+        </div>
+        <!-----------about---------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/Jose M.jpeg" >
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title"> About Me</h1>
+                        <p><strong> Jose M</strong> <br><br>
+
+                           <strong>Background & Education:</strong><br><br>
+                            I hail from Peermade and hold a Bachelor of Computer Application degree. Currently, I'm pursuing a Master of Computer Application (MCA) at Marian College Kuttikkanam (Autonomous), where I've demonstrated a strong academic record and cultivated a diverse skillset. <br><br>
+                            
+                            <strong>Languages:</strong><br><br>
+                            I am fluent in Tamil, Malayalam, and English, which enables me to effectively communicate and collaborate in multicultural environments.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                    <li><span>Web development</span><br>Developing Webpages using PHP,Python and JS</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Projects">
+                            <ul>
+                    <li><span>Main Project in UG</span><br>Blood Bank Management system using python</li>
+                    <li><span>Mini Project in UG</span><br>Event management system using PHP</li>
+                            </ul>
+                        </div>
+                       
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                    <li><span>2019</span><br>CBSE - Trinity Garden Public School, 57th mile, Vandiperiyar</li>
+                    <li><span>2019 - 2021</span><br>Higher Secondary - Panchayath Higher Secondary School, Vandiperiyar</li>
+                    <li><span>2021 - 2024</span><br>BCA - St.Antony's College, Peruvanathanam</li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------Projects---------------->
+       
+        <!---------portfolio-------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title"> My Projects</h1>
+                <div class="projectlist">
+                    <div class="project">
+                        <img src="images/project2.png" >
+                        <div class="layer">
+                            <h3> Blood Bank Management System</h3>
+                    <p>Blood Bank Management System (BBMS) is a browser based system that is designed to store, process, and retrieve and analyse information concerned with the administrative and inventory management within a blood bank. </p>
+                    <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>    
+                </div>
+                </div>
+                    <div class="project">
+                        <img src="images/project1.png" >
+                        <div class="layer">
+                            <h3> Event Management System</h3>
+                            <p>The Event Management and Booking Website stands as a pioneering platform set to transform the lanscape of event planning and booking. </p>
+                            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------------contact------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>contact@josekuttu451@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>9061881899</p>
+                        <div class="social-icons">
+                            <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="images/my cv.pdf"download class="btn btn2 ">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                        <input  name="Name" placeholder=" Your Name" required>
+                        <input  name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+                        <button type="submit"  class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+    var tablinks= document.getElementsByClassName("tab-links")
+    var tabcontents= document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw7X-Oeo4K_OOKUK0ERhGspy-LNffZXVuxSsqHN1Jbc7a5GdLoMEvhpyTSH9ZMRnR7x/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            })
+                
+        },5000)
+        form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    
+{
+}  </script>
+    </body>
+</html>
